@@ -73,7 +73,7 @@ procedure ApplyCorsHeaders(
   Response: TWebResponse
 );
 const
-  AllowedOrigin = 'http://localhost:8081';
+  AllowedOrigin = 'http://localhost:' + cClientPort;
 var
   Origin: string;
 begin

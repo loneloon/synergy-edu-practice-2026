@@ -36,6 +36,7 @@ const
   cDbUser = 'root';
   cDbPass = '466789PUMA';
   cDbName = 'lifestat';
+  cClientPort = '80';
 
 implementation
 
