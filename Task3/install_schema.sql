@@ -50,7 +50,7 @@ CREATE TABLE city (
 CREATE TABLE hotel (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(20) NOT NULL,
-    raiting DECIMAL,
+    rating DECIMAL,
     price DECIMAL,
     description VARCHAR(200),
     address VARCHAR(80) NOT NULL,
@@ -66,7 +66,7 @@ CREATE TABLE tour (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(20) NOT NULL,
     price DECIMAL,
-    raiting DECIMAL,
+    rating DECIMAL,
     description VARCHAR(200),
     city BIGINT NOT null,
 
