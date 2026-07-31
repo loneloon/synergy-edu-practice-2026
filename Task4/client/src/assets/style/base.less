@@ -1,0 +1,103 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  touch-action: none;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.6rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  color: #fff;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  
+  justify-content: center;
+  align-content: center;
+  
+  padding: 0 20px;
+  z-index: 1000;
+  width: 100%;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.topbarCenter {
+    grid-column: 2;
+    justify-self: center;
+}
+
+.signOutButton {
+  grid-column: 3;
+  justify-content: center;
+  justify-self: end;
+  background-color: #f12222;
+  color: #f2f2f2;
+  
+  font: inherit;
+  font-size: 14px;
+  font-weight: bold;
+
+  margin-right: 3rem;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  border-radius: 11px;
+  cursor: pointer;
+}
+
+.pagination {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #000;
+}
+
+.navArrows {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
+
+.arrow {
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.6);
+}

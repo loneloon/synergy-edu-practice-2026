@@ -1,0 +1,257 @@
+.activityTracker {
+    width: min(900px, calc(100% - 32px));
+    margin: 24px auto;
+    overflow: hidden;
+
+    color: #20242b;
+    background: #f5f6f8;
+    border: 1px solid rgba(20, 24, 32, 0.12);
+    border-radius: 14px;
+
+    font-family: Arial, sans-serif;
+    box-shadow: 0 8px 24px rgba(1, 1, 2, 0.651);
+}
+
+.completedActivitiesList {
+    /*
+     * Each row is approximately 75px tall.
+     * The list displays up to five rows before scrolling.
+     */
+    max-height: 375px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: thin;
+    scrollbar-color:
+        rgba(20, 24, 32, 0.3)
+        transparent;
+}
+
+.completedActivitiesList::-webkit-scrollbar {
+    width: 7px;
+}
+
+.completedActivitiesList::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.completedActivitiesList::-webkit-scrollbar-thumb {
+    background: rgba(20, 24, 32, 0.25);
+    border-radius: 999px;
+}
+
+.completedActivitiesList::-webkit-scrollbar-thumb:hover {
+    background: rgba(20, 24, 32, 0.4);
+}
+
+.currentActivityBar,
+.completedActivityBar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 18px;
+
+    min-height: 75px;
+    padding: 16px 18px;
+
+    background: #fafafa;
+    border-bottom: 1px solid rgba(20, 24, 32, 0.1);
+}
+
+.completedActivityBar {
+    background: #fafafa;
+}
+
+.activityIdentity {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+}
+
+.label {
+    font-size: 1rem;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+.activityName {
+    font-size: 1rem;
+    overflow: hidden;
+    color: #59616d;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.category {
+    flex-shrink: 0;
+    padding: 4px 9px;
+
+    color: #59616d;
+    background: #eceef1;
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.stopwatch {
+    min-width: 92px;
+    font-family: "Courier New", monospace;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.activityTimeRange {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #59616d;
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.timeSeparator {
+    color: #9a9fa8;
+}
+
+.activityLength {
+    min-width: 100px;
+
+    color: #20242b;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.nextActivitySection {
+    padding: 20px 18px;
+}
+
+.sectionLabel {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) minmax(140px, 220px) auto;
+    gap: 12px;
+}
+
+.activityInput,
+.activitySelect {
+    min-width: 0;
+    height: 42px;
+    padding: 0 12px;
+
+    color: #20242b;
+    background: #ffffff;
+    border: 1px solid rgba(20, 24, 32, 0.18);
+    border-radius: 8px;
+
+    font: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition:
+        border-color 150ms ease,
+        box-shadow 150ms ease;
+}
+
+.activityInput:focus,
+.activitySelect:focus {
+    border-color: #e9202e;
+    box-shadow: 0 0 0 3px rgba(233, 32, 46, 0.12);
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 90px;
+    height: 42px;
+    padding: 0 18px;
+
+    color: #ffffff;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+
+    box-shadow: 0 3px 8px rgba(20, 24, 32, 0.15);
+    transition:
+        transform 120ms ease,
+        filter 120ms ease,
+        box-shadow 120ms ease;
+}
+
+.button:hover {
+    filter: brightness(1.06);
+    box-shadow: 0 5px 12px rgba(20, 24, 32, 0.18);
+    transform: translateY(-1px);
+}
+
+.button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(20, 24, 32, 0.14);
+}
+
+.button:focus-visible {
+    outline: 3px solid rgba(233, 32, 46, 0.25);
+    outline-offset: 2px;
+}
+
+.finishButton {
+    background: #454b55;
+}
+
+.startButton {
+    background: #e9202e;
+}
+
+.disabledButton {
+    cursor: not-allowed;
+    opacity: 0.45;
+    box-shadow: none;
+}
+
+.disabledButton:hover {
+    filter: none;
+    transform: none;
+    box-shadow: none;
+}
+
+@media (max-width: 680px) {
+    .currentActivityBar,
+    .completedActivityBar {
+        grid-template-columns: 1fr auto;
+    }
+
+    .activityIdentity {
+        grid-column: 1 / -1;
+        flex-wrap: wrap;
+    }
+
+    .activityLength {
+        min-width: auto;
+    }
+
+    .controls {
+        grid-template-columns: 1fr;
+    }
+
+    .button {
+        width: 100%;
+    }
+}

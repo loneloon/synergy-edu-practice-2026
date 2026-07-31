@@ -1,0 +1,15 @@
+INSERT INTO activity_group (name) VALUES
+("Work"),
+("Rest"),
+("Social"),
+("Family"),
+("Exercise"),
+("Learning"),
+("Hobbies"),
+("Food"),
+("Hygiene"),
+("Entertainment"),
+("Housework"),
+("Transit/Commute"),
+("Outdoors"),
+("Other");

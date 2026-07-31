@@ -1,0 +1,122 @@
+/* TextSections.module.css */
+
+.textViewer {
+    width: min(100%, 680px);
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    height: 46px;
+    padding-left: 22px;
+}
+
+.tab {
+    position: relative;
+    height: 40px;
+    padding: 0 24px;
+    border: 1px solid #4c4b6d;
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    background: #d2d4e7;
+    color: #4c4b6d;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    transition:
+        height 160ms ease,
+        color 160ms ease,
+        background-color 160ms ease;
+
+    &:hover {
+        color: #34342f;
+        background: #e2e4f3;
+    }
+}
+
+.activeTab {
+    z-index: 2;
+    height: 46px;
+    color: #292a31;
+    background: #f0f2ff;
+}
+
+.content {
+    min-height: 0;
+    padding: 28px 30px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    border: 1px solid rgba(20, 24, 32, 0.12);
+    border-radius: 18px;
+    background: #f5f6f8;
+
+    scrollbar-width: thin;
+    scrollbar-color: #8b8b8b transparent;
+}
+
+.content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: #8b8b8b;
+}
+
+.content::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.title {
+    margin: 0 0 18px;
+    color: #20242a;
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.text {
+    color: #464d57;
+    font-size: 16px;
+    line-height: 1.75;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 600px) {
+    .textViewer {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .content {
+        padding: 22px 20px;
+    }
+
+    .tabs {
+        padding-left: 14px;
+    }
+
+    .tab {
+        padding: 0 18px;
+    }
+}

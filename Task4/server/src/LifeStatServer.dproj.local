@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2026/07/30 14:32:58.484,=C:\Users\user\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2026/07/30 14:32:58.669,=C:\Users\user\Documents\Embarcadero\Studio\Projects\ServerConst1.pas</Transaction>
+    <Transaction>2026/07/30 14:33:39.748,D:\Games\life-stat-server\ServerConst1.pas=C:\Users\user\Documents\Embarcadero\Studio\Projects\ServerConst1.pas</Transaction>
+    <Transaction>2026/07/30 14:33:43.416,D:\Games\life-stat-server\WebModuleUnit1.dfm=C:\Users\user\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.dfm</Transaction>
+    <Transaction>2026/07/30 14:33:43.416,D:\Games\life-stat-server\WebModuleUnit1.pas=C:\Users\user\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2026/07/30 14:33:53.950,D:\Games\life-stat-server\LifeStatServer.dproj=C:\Users\user\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2026/07/30 15:47:18.387,=D:\Games\life-stat-server\libmysql.dll</Transaction>
+  </Transactions>
+</BorlandProject>
