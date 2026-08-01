@@ -21,31 +21,31 @@ files: ./setup_db.sql ./install_schema.sql ./fill_db.sql
 - tour: отдельный тур/туристическая программа
 
 Пояснения полей таблиц:
-    - language (Язык):
-        - name: название
-    - currency (Валюта):
-        - name: название
-    - country (Страна):
-        - name: название
-        - currency: fk
-        - language: fk
-        - safety_index: индекс безопасности страны
-    - city (Город):
-        - name: название
-        - country: fk
-    - hotel (Отель):
-        - name: название
-        - price: мин. стоимость за ночь
-        - rating: рейтинг
-        - description: описание
-        - address: адрес
-        - city: fk
-    - tour (Тур):
-        - name: название
-        - price: стоимость
-        - rating: рейтинг
-        - description: описание
-        - city: fk
+- language (Язык):
+    - name: название
+- currency (Валюта):
+    - name: название
+- country (Страна):
+    - name: название
+    - currency: fk
+    - language: fk
+    - safety_index: индекс безопасности страны
+- city (Город):
+    - name: название
+    - country: fk
+- hotel (Отель):
+    - name: название
+    - price: мин. стоимость за ночь
+    - rating: рейтинг
+    - description: описание
+    - address: адрес
+    - city: fk
+- tour (Тур):
+    - name: название
+    - price: стоимость
+    - rating: рейтинг
+    - description: описание
+    - city: fk
 
 БД может считаться нормализованной (2NF-3NF), т.к.:
 - данные хранятся в атомарном виде
